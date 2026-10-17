@@ -169,6 +169,7 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 .file .fi{font-size:22px;color:var(--accent)}
 .file b{display:block;font-size:15px}
 .file span{font-size:13px;color:var(--text-3)}
+.file .req{display:block;font-size:12.5px;color:var(--text-3);font-style:normal;margin-top:4px;line-height:1.55;opacity:.85}
 
 /* faq */
 .faq{max-width:820px}
@@ -385,6 +386,14 @@ footer{padding:44px 0;border-top:1px solid var(--line)}
             改由播放插件在解码样本流上抽头喂给同一套 FFT，频谱照样跟手。这一台的界面主色是 12 套主题色里的「海之蓝」，
             频谱默认跟随主题色，也可切自定义。</p>
         </div>
+        <div class="phone" data-rv>
+          <figure><a href="img/android-lyric-dark.webp" target="_blank" rel="noopener">
+            <img src="img/android-lyric-dark.webp" width="620" height="1378" loading="lazy" decoding="async"
+                 alt="纵享音乐安卓端全屏歌词：当前行高亮带柔光底纹，其余行按距离淡出"></a></figure>
+          <h4>全屏歌词</h4>
+          <p>收起封面与频谱的纯歌词态，一屏能容下十行左右。当前行加粗高亮并垫一层柔光底纹，
+            上下行按距离逐级淡出，底部保留循环、收藏、加入歌单、下载四个动作与进度条、音质档位。</p>
+        </div>
       </div>
     </div>
   </section>
@@ -526,9 +535,11 @@ footer{padding:44px 0;border-top:1px solid var(--line)}
         </div>
         <div class="files">
           <a class="file" id="winCard" href="https://yinengmr.github.io/zxmusic_1.1.9_x64-setup.exe">
-            <span class="fi">⊞</span><div><b>Windows 桌面端</b><span id="winMeta">NSIS 安装包 · x64</span></div></a>
+            <span class="fi">⊞</span><div><b>Windows 桌面端</b><span id="winMeta">NSIS 安装包 · x64</span>
+              <em class="req">最低 Windows 10 · x64 · 依赖 WebView2 Runtime（安装器自动补装）· 当前用户安装，无需管理员权限</em></div></a>
           <a class="file" id="andCard" href="https://yinengmr.github.io/zx_music_1.1.9_20261008.apk">
-            <span class="fi">♆</span><div><b>Android 移动端</b><span id="andMeta">APK · 直接安装</span></div></a>
+            <span class="fi">♆</span><div><b>Android 移动端</b><span id="andMeta">APK · 直接安装</span>
+              <em class="req">最低 Android 8.0（API 26）· 仅 arm64-v8a · 需允许后台运行以保续播</em></div></a>
         </div>
       </div>
     </div>
