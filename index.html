@@ -98,6 +98,19 @@ nav{max-width:var(--maxw);margin:0 auto;padding:16px 24px;display:flex;align-ite
 .card h3{margin-bottom:9px}
 .card p{font-size:15px;line-height:1.75}
 
+/* gallery */
+.shot{display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:center;margin-bottom:40px}
+.shot.alt .shot-txt{order:-1}
+.shot figure{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg-elev);
+  box-shadow:0 22px 60px rgba(0,0,0,.45);transition:.3s;line-height:0}
+.shot figure:hover{border-color:rgba(240,160,75,.45);transform:translateY(-4px)}
+.shot img{display:block;width:100%;height:auto}
+.shot h3{margin-bottom:10px;font-size:21px}
+.shot p{font-size:15px;line-height:1.8}
+.shot .badge{display:inline-block;font-size:12px;color:var(--accent);border:1px solid rgba(240,160,75,.35);
+  border-radius:999px;padding:3px 11px;margin-bottom:13px}
+.shots{margin-top:8px}
+
 /* table */
 .tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--bg-elev)}
 table{width:100%;border-collapse:collapse;min-width:680px;font-size:15px}
@@ -178,6 +191,8 @@ footer{padding:44px 0;border-top:1px solid var(--line)}
   .hero{padding-top:132px}
   section{padding:70px 0}
   .dl{grid-template-columns:1fr;padding:30px}
+  .shot{grid-template-columns:1fr;gap:20px}
+  .shot.alt .shot-txt{order:0}
 }
 </style>
 <noscript><style>[data-rv]{opacity:1;transform:none}</style></noscript>
@@ -193,6 +208,7 @@ footer{padding:44px 0;border-top:1px solid var(--line)}
     <button class="menu-btn" id="menuBtn" aria-label="菜单">≡</button>
     <div class="nav-links" id="navLinks">
       <a href="#features">核心能力</a>
+      <a href="#gallery">界面预览</a>
       <a href="#platforms">三端对照</a>
       <a href="#quality">音质</a>
       <a href="#changelog">更新日志</a>
@@ -272,6 +288,52 @@ footer{padding:44px 0;border-top:1px solid var(--line)}
             频谱采集链同步自愈，不需要重启或手动恢复。</p></div>
         <div class="card" data-rv><div class="ico">⚑</div><h3>扫码登录</h3>
           <p>1.1.9 起支持扫码登录账号，歌单可收藏至账号，播放记录与收藏在多端之间对齐。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="sec-head" data-rv>
+        <span class="tag">Interface</span>
+        <h2>界面预览</h2>
+        <p>以下三张均为 v1.1.9 Windows 桌面端实机截图，浅色与深色主题各有所示。点击图片可打开原图。</p>
+      </div>
+      <div class="shots">
+        <div class="shot" data-rv>
+          <figure><a href="img/discover-light.webp" target="_blank" rel="noopener">
+            <img src="img/discover-light.webp" width="1440" height="960" loading="lazy" decoding="async"
+                 alt="纵享音乐发现页浅色主题：侧栏导航、特色榜单九宫格与歌单广场分类标签"></a></figure>
+          <div class="shot-txt">
+            <span class="badge">浅色主题</span>
+            <h3>发现页</h3>
+            <p>侧栏收着发现、搜索、最近播放、下载管理与本地音乐，下面是本地歌单与收藏的歌单。
+              主区「特色榜单」按播放量出卡，「歌单广场」提供华语 / 流行 / 伤感 / 古风 / 欧美 / 游戏 /
+              影视原声 / 轻音乐 / 民谣 / 电子十类标签切换，侧栏底部常驻当前版本号。</p>
+          </div>
+        </div>
+        <div class="shot alt" data-rv>
+          <figure><a href="img/player-lyric-light.webp" target="_blank" rel="noopener">
+            <img src="img/player-lyric-light.webp" width="1440" height="960" loading="lazy" decoding="async"
+                 alt="纵享音乐全屏播放页：大封面与逐行滚动歌词，当前行高亮"></a></figure>
+          <div class="shot-txt">
+            <span class="badge">沉浸模式</span>
+            <h3>全屏播放页</h3>
+            <p>左侧大封面，右侧歌词逐行滚动，当前行用品牌橙高亮、其余行淡出，词曲作者信息随歌词一起滚动。
+              顶部保留曲名、歌手、专辑与来源音源标识，底部进度条常驻播放控制、音质档位、收藏、加入歌单、下载与音量。</p>
+          </div>
+        </div>
+        <div class="shot" data-rv>
+          <figure><a href="img/playlists-dark.webp" target="_blank" rel="noopener">
+            <img src="img/playlists-dark.webp" width="1440" height="960" loading="lazy" decoding="async"
+                 alt="纵享音乐深色主题歌单广场：真实封面网格与播放量角标"></a></figure>
+          <div class="shot-txt">
+            <span class="badge">深色主题</span>
+            <h3>歌单广场</h3>
+            <p>同一套布局切到深色配色，封面网格带播放量角标与曲目数。界面底色由几层品牌橙与珊瑚色的径向渐变光斑叠出，
+              深色主题下还会浮出月亮与星空装饰层；主题、频谱样式与颜色来源都能在设置里改。</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
