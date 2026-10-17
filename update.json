@@ -1,0 +1,22 @@
+{
+    "announcement": {
+        "id": "20261008",
+        "title": "公告",
+        "content": "1.1.9重磅来袭！多项优化，推荐更新",
+        "dismissible": true
+    },
+    "update": {
+        "desktop": {
+            "version": "1.1.9",
+            "note": "● 支持扫码登录\n● 歌单收藏至账号\n● UI交互优化\n● 歌词/封面写入",
+            "dismissible": false,
+            "downloadurl": "https://yinengmr.github.io/zxmusic_1.1.9_x64_2026-setup_20261008.exe"
+        },
+        "android": {
+            "version": "1.1.9",
+            "note": "● 支持扫码登录\n● 歌单收藏至账号\n● UI交互优化\n● 歌词/封面写入",
+            "dismissible": false,
+            "downloadurl": "https://yinengmr.github.io/zx_music_1.1.9_20261008.apk"
+        }
+    }
+}
