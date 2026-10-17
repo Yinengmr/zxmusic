@@ -110,6 +110,16 @@ nav{max-width:var(--maxw);margin:0 auto;padding:16px 24px;display:flex;align-ite
 .shot .badge{display:inline-block;font-size:12px;color:var(--accent);border:1px solid rgba(240,160,75,.35);
   border-radius:999px;padding:3px 11px;margin-bottom:13px}
 .shots{margin-top:8px}
+.sub-h{display:flex;align-items:center;gap:10px;margin:44px 0 24px;font-size:17px;font-weight:600}
+.sub-h::before{content:"";width:3px;height:16px;border-radius:2px;background:var(--grad)}
+.sub-h span{font-size:13px;color:var(--text-3);font-weight:400}
+.phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:22px}
+.phone figure{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg-elev);
+  box-shadow:0 18px 46px rgba(0,0,0,.42);transition:.3s;line-height:0}
+.phone figure:hover{border-color:rgba(240,160,75,.45);transform:translateY(-5px)}
+.phone img{display:block;width:100%;height:auto}
+.phone h4{font-size:16px;margin:18px 0 7px}
+.phone p{font-size:14px;line-height:1.78}
 
 /* table */
 .tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--bg-elev)}
@@ -297,8 +307,9 @@ footer{padding:44px 0;border-top:1px solid var(--line)}
       <div class="sec-head" data-rv>
         <span class="tag">Interface</span>
         <h2>界面预览</h2>
-        <p>以下三张均为 v1.1.9 Windows 桌面端实机截图，浅色与深色主题各有所示。点击图片可打开原图。</p>
+        <p>以下均为 v1.1.9 实机截图：桌面端四张（浅色 / 深色主题各两态），移动端三张。点击图片可打开原图。</p>
       </div>
+      <div class="sub-h" data-rv>桌面端 <span>Windows · 无边框自绘标题栏</span></div>
       <div class="shots">
         <div class="shot" data-rv>
           <figure><a href="img/discover-light.webp" target="_blank" rel="noopener">
@@ -324,6 +335,18 @@ footer{padding:44px 0;border-top:1px solid var(--line)}
           </div>
         </div>
         <div class="shot" data-rv>
+          <figure><a href="img/player-spectrum-dark.webp" target="_blank" rel="noopener">
+            <img src="img/player-spectrum-dark.webp" width="1440" height="960" loading="lazy" decoding="async"
+                 alt="纵享音乐深色播放页：底部铺满整屏的线性波形频谱，随系统实际输出实时跳动"></a></figure>
+          <div class="shot-txt">
+            <span class="badge">深色主题</span>
+            <h3>波形条频谱</h3>
+            <p>铺满整屏底部的录音风格波形条就是频谱本体。桌面端用 WASAPI loopback 直接抓取系统真实输出，
+              在 Rust 侧做 FFT 后约 60ms 一帧推给前端 canvas，所以条子跳的就是你耳朵听到的那一路，
+              与节拍零相位差、不随播放进度累积漂移。频谱有环形与波形条两种样式，可叠渐变色彩、镜像对称与发光霓虹。</p>
+          </div>
+        </div>
+        <div class="shot alt" data-rv>
           <figure><a href="img/playlists-dark.webp" target="_blank" rel="noopener">
             <img src="img/playlists-dark.webp" width="1440" height="960" loading="lazy" decoding="async"
                  alt="纵享音乐深色主题歌单广场：真实封面网格与播放量角标"></a></figure>
@@ -331,8 +354,36 @@ footer{padding:44px 0;border-top:1px solid var(--line)}
             <span class="badge">深色主题</span>
             <h3>歌单广场</h3>
             <p>同一套布局切到深色配色，封面网格带播放量角标与曲目数。界面底色由几层品牌橙与珊瑚色的径向渐变光斑叠出，
-              深色主题下还会浮出月亮与星空装饰层；主题、频谱样式与颜色来源都能在设置里改。</p>
+              深色主题下还会浮出月亮与星空装饰层。主色可在 12 套主题色之间切换，本站用的琥珀橙就是其中一套。</p>
           </div>
+        </div>
+      </div>
+      <div class="sub-h" data-rv>移动端 <span>Android · 与桌面端共用同一套前端</span></div>
+      <div class="phones">
+        <div class="phone" data-rv>
+          <figure><a href="img/android-home-light.webp" target="_blank" rel="noopener">
+            <img src="img/android-home-light.webp" width="620" height="1378" loading="lazy" decoding="async"
+                 alt="纵享音乐安卓端首页：问候语、排行榜、四个功能入口与歌单广场"></a></figure>
+          <h4>首页</h4>
+          <p>按时段变化的问候语、横向滑动的排行榜、下载管理 / 本地音乐 / 本地歌单 / 最近播放四个入口，
+            往下是分类标签与歌单网格，底部三 tab 导航。</p>
+        </div>
+        <div class="phone" data-rv>
+          <figure><a href="img/android-playlist-light.webp" target="_blank" rel="noopener">
+            <img src="img/android-playlist-light.webp" width="620" height="1378" loading="lazy" decoding="async"
+                 alt="纵享音乐安卓端歌单详情：曲目列表带 VIP、Hi-Res、无损音质标签"></a></figure>
+          <h4>歌单详情</h4>
+          <p>曲目列表逐行标出 VIP、Hi-Res、无损档位，顶部可按歌名 / 歌手 / 专辑过滤，
+            正在播放的那一行左侧封面带进度环，底部常驻迷你播放条。</p>
+        </div>
+        <div class="phone" data-rv>
+          <figure><a href="img/android-player-dark.webp" target="_blank" rel="noopener">
+            <img src="img/android-player-dark.webp" width="620" height="1378" loading="lazy" decoding="async"
+                 alt="纵享音乐安卓端播放页：环形频谱包裹唱片封面，三行歌词滚动"></a></figure>
+          <h4>环形频谱</h4>
+          <p>环形频谱贴紧唱片外沿环绕一圈，三行歌词当前行高亮。安卓没有 AAudio 输出环回，
+            改由播放插件在解码样本流上抽头喂给同一套 FFT，频谱照样跟手。这一台的界面主色是 12 套主题色里的「海之蓝」，
+            频谱默认跟随主题色，也可切自定义。</p>
         </div>
       </div>
     </div>
