@@ -572,7 +572,7 @@ document.querySelectorAll('[data-rv]').forEach(el=>io.observe(el));
 // 与 yinengmr.github.io 同源时可直接读取；跨域被拦时保留页面上的硬编码值
 (async()=>{
   try{
-    const r=await fetch('https://yinengmr.github.io/zxmusic.json',{cache:'no-store'});
+    const r=await fetch('https://yinengmr.github.io/zxmusic/update.json',{cache:'no-store'});
     if(!r.ok)throw 0;const m=await r.json();
     const d=m.update?.desktop,a=m.update?.android;
     if(d?.version){

@@ -1,22 +1,22 @@
 {
     "announcement": {
-        "id": "20261008",
+        "id": "20261024",
         "title": "公告",
-        "content": "1.1.9重磅来袭！多项优化，推荐更新",
-        "dismissible": true
+        "content": "1.1.10 重磅来袭！多项优化，推荐更新, 在公众号“知行图文”回复关键字获取更新",
+        "dismissible": false
     },
     "update": {
         "desktop": {
-            "version": "1.1.9",
-            "note": "● 支持扫码登录\n● 歌单收藏至账号\n● UI交互优化\n● 歌词/封面写入",
+            "version": "1.1.10",
+            "note": "● 支持歌单链接导入/分享\n● 支持桌面歌词\n● 歌单批量操作\n● UI交互优化\n● 右键操作",
             "dismissible": false,
-            "downloadurl": "https://yinengmr.github.io/zxmusic/zxmusic_1.1.9_x64_2026-setup_20261008.exe"
+            "downloadurl": "https://yinengmr.github.io/zxmusic/zx_music_1.1.10_x64-setup_20261024.exe"
         },
         "android": {
-            "version": "1.1.9",
-            "note": "● 支持扫码登录\n● 歌单收藏至账号\n● UI交互优化\n● 歌词/封面写入",
+            "version": "1.1.10",
+            "note": "● 支持歌单链接导入/分享\n● 歌单批量操作\n● UI交互优化\n● 搜索单曲支持小酷音源",
             "dismissible": false,
-            "downloadurl": "https://yinengmr.github.io/zxmusic/zx_music_1.1.9_20261008.apk"
+            "downloadurl": "https://yinengmr.github.io/zxmusic/zx_music_1.1.10_20261024.apk"
         }
     }
 }
