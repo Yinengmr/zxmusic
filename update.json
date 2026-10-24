@@ -3,7 +3,7 @@
         "id": "20261024",
         "title": "公告",
         "content": "1.1.10 重磅来袭！多项优化，推荐更新, 在公众号“知行图文”回复关键字获取更新",
-        "dismissible": false
+        "dismissible": true
     },
     "update": {
         "desktop": {
